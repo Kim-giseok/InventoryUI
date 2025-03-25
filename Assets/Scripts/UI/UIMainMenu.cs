@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIMainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Info")]
+    public TextMeshProUGUI idTxt;
+    public TextMeshProUGUI levelTxt;
+    public Slider exp;
+    public TextMeshProUGUI expTxt;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Header("Gold")]
+    public TextMeshProUGUI goldTxt;
+
+    [Header("Buttons")]
+    public Button statusBtn;
+    public Button invenBtn;
 }

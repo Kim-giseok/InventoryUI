@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIInventory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("InvenInfo")]
+    public TextMeshProUGUI itemCntTxt;
+    public TextMeshProUGUI maxItemCntTxt;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Header("")]
+    public Button backBtn;
 }
