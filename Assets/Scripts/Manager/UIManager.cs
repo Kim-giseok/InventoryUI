@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -14,4 +15,10 @@ public class UIManager : MonoBehaviour
     public UIMainMenu MainMenu => mainMenu;
     public UIStatus Status => status;
     public UIInventory Inventory => inventory;
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+    }
 }
