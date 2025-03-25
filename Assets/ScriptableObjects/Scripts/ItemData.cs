@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New ItemData", menuName = "Data/Item")]
-public class ItemData : MonoBehaviour
+public class ItemData : ScriptableObject
 {
     [field: SerializeField] public string Name { get; private set; }
     [field: SerializeField] public Stat[] Stats { get; private set; }

@@ -3253,6 +3253,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStat: {fileID: 11400000, guid: 16d2086c0b04308428c9f3b2a57d9a99, type: 2}
+  itemDatas:
+  - {fileID: 11400000, guid: 9e3262fa2f7d1e246b762cecf76f9145, type: 2}
+  - {fileID: 11400000, guid: acd8580a77cf8d14f9bf3714444da361, type: 2}
+  - {fileID: 11400000, guid: 9164184c28bdde94b8997487f5466350, type: 2}
+  - {fileID: 11400000, guid: f705edd312c4bde419f34f3d30bf1192, type: 2}
+  - {fileID: 11400000, guid: ce5c7514c47cdd542aaec7b5a0dc33ac, type: 2}
+  - {fileID: 11400000, guid: 32ce15c82fbf4c647a8d6f3d33b84038, type: 2}
+  - {fileID: 11400000, guid: a8d610c571e3c9749bbba6b7015c8e8d, type: 2}
 --- !u!1 &1263513854
 GameObject:
   m_ObjectHideFlags: 0
