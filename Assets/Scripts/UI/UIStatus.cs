@@ -12,7 +12,7 @@ public class UIStatus : MonoBehaviour
     public RectTransform hp;
     public RectTransform cri;
 
-    TextMeshProUGUI atkTxt;
+    public TextMeshProUGUI atkTxt;
     TextMeshProUGUI defTxt;
     TextMeshProUGUI hpTxt;
     TextMeshProUGUI criTxt;
@@ -35,10 +35,9 @@ public class UIStatus : MonoBehaviour
 
     public void SetInfo(Character player)
     {
-        atkTxt.text = player.Atk.ToString();
-        defTxt.text = player.Def.ToString();
-        hpTxt.text = player.Hp.ToString();
-        criTxt.text = player.Cri.ToString();
+        atkTxt.text = player.Stats[StatType.Atk].ToString();
+        defTxt.text = player.Stats[StatType.Def].ToString();
+        hpTxt.text = player.Stats[StatType.Hp].ToString();
+        criTxt.text = player.Stats[StatType.Cri].ToString();
     }
-
 }

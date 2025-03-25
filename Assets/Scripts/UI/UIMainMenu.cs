@@ -54,6 +54,7 @@ public class UIMainMenu : MonoBehaviour
     {
         idTxt.text = player.Id;
         levelTxt.text = player.Level.ToString();
+        exp.value = (float)player.Exp / player.MaxExp;
         expTxt.text = $"{player.Exp}/{player.MaxExp}";
 
         goldTxt.text = player.Gold.ToString();

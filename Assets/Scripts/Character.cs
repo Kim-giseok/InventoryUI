@@ -8,23 +8,21 @@ public class Character
     public int Level { get; private set; }
     public int Exp { get; private set; }
     public int MaxExp { get; private set; }
-    public int Atk { get; private set; }
-    public int Def { get; private set; }
-    public int Hp { get; private set; }
-    public int Cri { get; private set; }
+
+    public Dictionary<StatType, int> Stats { get; private set; } = new();
 
     public int Gold { get; private set; }
 
-    public Character(string id, int level, int exp, int maxExp, int atk, int def, int hp, int cri, int gold)
+    public Character(string id, int level, int exp, int maxExp, Stat[] stats, int gold)
     {
         Id = id;
         Level = level;
         Exp = exp;
         MaxExp = maxExp;
-        Atk = atk;
-        Def = def;
-        Hp = hp;
-        Cri = cri;
+
+        foreach (var stat in stats)
+            Stats[stat.type] = stat.value;
+
         Gold = gold;
     }
 }
