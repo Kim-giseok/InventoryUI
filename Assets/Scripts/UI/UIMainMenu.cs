@@ -21,16 +21,26 @@ public class UIMainMenu : MonoBehaviour
 
     public void OpenMainMenu()
     {
+        UIManager.Instance.Status.gameObject.SetActive(false);
+        UIManager.Instance.Inventory.gameObject.SetActive(false);
 
+        statusBtn.gameObject.SetActive(true);
+        invenBtn.gameObject.SetActive(true);
     }
 
     public void OpenStatus()
     {
+        statusBtn.gameObject.SetActive(false);
+        invenBtn.gameObject.SetActive(false);
 
+        UIManager.Instance.Status.gameObject.SetActive(true);
     }
 
     public void OpenInventory()
     {
+        statusBtn.gameObject.SetActive(false);
+        invenBtn.gameObject.SetActive(false);
 
+        UIManager.Instance.Inventory.gameObject.SetActive(true);
     }
 }
