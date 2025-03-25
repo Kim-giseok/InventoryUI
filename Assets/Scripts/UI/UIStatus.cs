@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -19,6 +20,7 @@ public class UIStatus : MonoBehaviour
 
     [Header("")]
     public Button backBtn;
+    Character player;
 
     void Awake()
     {
@@ -33,8 +35,20 @@ public class UIStatus : MonoBehaviour
         backBtn.onClick.AddListener(UIManager.Instance.MainMenu.OpenMainMenu);
     }
 
+    void OnEnable()
+    {
+        UpdateStats();
+    }
+
     public void SetInfo(Character player)
     {
+        this.player = player;
+        UpdateStats();
+    }
+
+    void UpdateStats()
+    {
+        if (player == null) return;
         atkTxt.text = player.Stats[StatType.Atk].ToString();
         defTxt.text = player.Stats[StatType.Def].ToString();
         hpTxt.text = player.Stats[StatType.Hp].ToString();
