@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
         SetData();
     }
 
+    /// <summary>
+    /// 실행시 기본적인 데이터를 설정해 줍니다.
+    /// </summary>
     public void SetData()
     {
         List<Item> inventoy = new();

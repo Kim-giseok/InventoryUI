@@ -30,11 +30,20 @@ public class Character
         Inventory = inventory;
     }
 
+    /// <summary>
+    /// 인벤토리에 아이템을 추가합니다.
+    /// </summary>
+    /// <param name="item"></param>
     public void AddItem(Item item)
     {
         Inventory.Add(item);
+        UIManager.Instance.Inventory.AddItem(item);
     }
 
+    /// <summary>
+    /// 지정된 아이템을 장착합니다.
+    /// </summary>
+    /// <param name="item"></param>
     public void Equip(Item item)
     {
         item.isEquip = true;
@@ -42,6 +51,10 @@ public class Character
             Stats[stat.type] += stat.value;
     }
 
+    /// <summary>
+    /// 지정된 아이템을 장착해제합니다.
+    /// </summary>
+    /// <param name="item"></param>
     public void UnEquip(Item item)
     {
         foreach (var stat in item.data.Stats)

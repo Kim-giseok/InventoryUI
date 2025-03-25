@@ -26,6 +26,9 @@ public class UIInventory : MonoBehaviour
         InitInventoryUI();
     }
 
+    /// <summary>
+    /// 처음에 플레이어의 인벤토리를 반영해줍니다.
+    /// </summary>
     void InitInventoryUI()
     {
         int maxItmeCnt = Mathf.Max(12, player.Inventory.Count);
@@ -40,6 +43,10 @@ public class UIInventory : MonoBehaviour
         maxItemCntTxt.text = $"/{maxItmeCnt}";
     }
 
+    /// <summary>
+    /// 플레이어의 인벤토리에 아이템이 추가될 때 호출되어서 슬롯을 늘려줍니다.
+    /// </summary>
+    /// <param name="item"></param>
     public void AddItem(Item item)
     {
         UISlot newSlot;
@@ -55,6 +62,10 @@ public class UIInventory : MonoBehaviour
         newSlot.RefreshUI();
     }
 
+    /// <summary>
+    /// 아이템 슬롯이 눌러지면 해당 아이템이 장착되어있는지 여부에 따라 적절한 매서드를 호출합니다.
+    /// </summary>
+    /// <param name="item"></param>
     public void EquipUnEquip(Item item)
     {
         if (item.isEquip)

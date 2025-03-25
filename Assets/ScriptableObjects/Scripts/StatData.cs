@@ -20,6 +20,9 @@ public class Stat
     public int value;
 }
 
+/// <summary>
+/// 플레이어의 능력치입니다.
+/// </summary>
 [CreateAssetMenu(fileName = "New StatData", menuName = "Data/Stat")]
 public class StatData : ScriptableObject
 {

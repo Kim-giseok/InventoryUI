@@ -25,6 +25,9 @@ public class UIMainMenu : MonoBehaviour
         invenBtn.onClick.AddListener(OpenInventory);
     }
 
+    /// <summary>
+    /// 메인매뉴가 보이게 합니다.
+    /// </summary>
     public void OpenMainMenu()
     {
         UIManager.Instance.Status.gameObject.SetActive(false);
@@ -34,6 +37,9 @@ public class UIMainMenu : MonoBehaviour
         invenBtn.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// 스테이터스 창이 보이게 합니다.
+    /// </summary>
     public void OpenStatus()
     {
         statusBtn.gameObject.SetActive(false);
@@ -42,6 +48,9 @@ public class UIMainMenu : MonoBehaviour
         UIManager.Instance.Status.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// 인벤토리를 보이게 합니다.
+    /// </summary>
     public void OpenInventory()
     {
         statusBtn.gameObject.SetActive(false);
@@ -50,6 +59,10 @@ public class UIMainMenu : MonoBehaviour
         UIManager.Instance.Inventory.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// 항상 보여주는 정보들을 표시해줍니다.
+    /// </summary>
+    /// <param name="player"></param>
     public void SetInfo (Character player)
     {
         idTxt.text = player.Id;

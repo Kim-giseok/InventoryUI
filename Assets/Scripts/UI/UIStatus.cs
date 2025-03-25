@@ -40,12 +40,19 @@ public class UIStatus : MonoBehaviour
         UpdateStats();
     }
 
+    /// <summary>
+    /// 플레이어의 스텟정보를 초기화합니다.
+    /// </summary>
+    /// <param name="player"></param>
     public void SetInfo(Character player)
     {
         this.player = player;
         UpdateStats();
     }
 
+    /// <summary>
+    /// 스텟창이 열릴때마다 플레이어의 스탯정보를 갱신해줍니다.
+    /// </summary>
     void UpdateStats()
     {
         if (player == null) return;
