@@ -8,25 +8,25 @@ public class UISlot : MonoBehaviour
 {
     [SerializeField] public Image icon;
     [SerializeField] TextMeshProUGUI equipTxt;
-    [SerializeField] Item Item;
+    Item itemInfo = null;
 
     public void SetItem(Item item)
     {
-        Item = item;
+        itemInfo = item;
         icon.sprite = item.data.icon;
     }
 
     public void RefreshUI()
     {
         icon.enabled = icon.sprite != null;
-        equipTxt.enabled = Item != null && Item.isEquip;
+        equipTxt.enabled = itemInfo != null && itemInfo.isEquip;
     }
 
     public void OnClickToEquip()
     {
-        if (Item == null) return;
+        if (itemInfo == null) return;
 
-        UIManager.Instance.Inventory.EquipUnEquip(Item);
+        UIManager.Instance.Inventory.EquipUnEquip(itemInfo);
         RefreshUI();
     }
 }
