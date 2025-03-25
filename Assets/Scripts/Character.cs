@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class Character
 {
-    string id;
-    int level;
-    int exp;
-    int maxExp;
-    int atk;
-    int def;
-    int hp;
-    int cri;
+    public string Id{ get; private set; }
+    public int Level { get; private set; }
+    public int Exp { get; private set; }
+    public int MaxExp { get; private set; }
+    public int Atk { get; private set; }
+    public int Def { get; private set; }
+    public int Hp { get; private set; }
+    public int Cri { get; private set; }
 
     public Character(string id, int level, int exp, int maxExp, int atk, int def, int hp, int cri)
     {
-        this.id = id;
-        this.level = level;
-        this.exp = exp;
-        this.maxExp = maxExp;
-        this.atk = atk;
-        this.def = def;
-        this.hp = hp;
-        this.cri = cri;
+        Id = id;
+        Level = level;
+        Exp = exp;
+        MaxExp = maxExp;
+        Atk = atk;
+        Def = def;
+        Hp = hp;
+        Cri = cri;
     }
 }
