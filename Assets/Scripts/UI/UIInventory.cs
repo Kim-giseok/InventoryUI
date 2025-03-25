@@ -12,4 +12,9 @@ public class UIInventory : MonoBehaviour
 
     [Header("")]
     public Button backBtn;
+
+    void Start()
+    {
+        backBtn.onClick.AddListener(UIManager.Instance.MainMenu.OpenMainMenu);
+    }
 }

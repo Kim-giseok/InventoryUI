@@ -19,6 +19,12 @@ public class UIMainMenu : MonoBehaviour
     public Button statusBtn;
     public Button invenBtn;
 
+    void Start()
+    {
+        statusBtn.onClick.AddListener(OpenStatus);
+        invenBtn.onClick.AddListener(OpenInventory);
+    }
+
     public void OpenMainMenu()
     {
         UIManager.Instance.Status.gameObject.SetActive(false);

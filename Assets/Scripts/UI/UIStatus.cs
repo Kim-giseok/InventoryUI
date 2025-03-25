@@ -27,4 +27,9 @@ public class UIStatus : MonoBehaviour
         hpTxt = hp.Find("Stat").GetComponent<TextMeshProUGUI>();
         criTxt = cri.Find("Stat").GetComponent<TextMeshProUGUI>();
     }
+
+    void Start()
+    {
+        backBtn.onClick.AddListener(UIManager.Instance.MainMenu.OpenMainMenu);
+    }
 }
