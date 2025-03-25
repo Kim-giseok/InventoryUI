@@ -23,5 +23,5 @@ public class Stat
 [CreateAssetMenu(fileName = "New StatData", menuName = "Data/Stat")]
 public class StatData : ScriptableObject
 {
-    [field: SerializeField] public Stat[] stats { get; private set; }
+    [field: SerializeField] public Stat[] Stats { get; private set; }
 }

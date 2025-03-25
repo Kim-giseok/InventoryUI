@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     public void SetData()
     {
-        player = new Character("chad", 10, 9, 12, characterStat.stats, 20000);
+        player = new Character("chad", 10, 9, 12, characterStat.Stats, 20000);
 
         UIManager.Instance.MainMenu.SetInfo(player);
         UIManager.Instance.Status.SetInfo(player);
