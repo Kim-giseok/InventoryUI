@@ -18,4 +18,19 @@ public class UIMainMenu : MonoBehaviour
     [Header("Buttons")]
     public Button statusBtn;
     public Button invenBtn;
+
+    public void OpenMainMenu()
+    {
+
+    }
+
+    public void OpenStatus()
+    {
+
+    }
+
+    public void OpenInventory()
+    {
+
+    }
 }
