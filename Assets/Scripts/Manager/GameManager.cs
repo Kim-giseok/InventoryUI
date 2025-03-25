@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] StatData characterStat;
     [SerializeField] ItemData[] itemDatas;
 
-    void Start()
+    void Awake()
     {
         SetData();
     }
@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
         UIManager.Instance.MainMenu.SetInfo(player);
         UIManager.Instance.Status.SetInfo(player);
+        UIManager.Instance.Inventory.player = player;
 
         UIManager.Instance.MainMenu.OpenMainMenu();
     }

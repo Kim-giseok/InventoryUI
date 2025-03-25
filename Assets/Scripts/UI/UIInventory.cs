@@ -17,6 +17,7 @@ public class UIInventory : MonoBehaviour
 
     [Header("")]
     public Button backBtn;
+    public Character player;
 
     void Start()
     {
@@ -27,9 +28,38 @@ public class UIInventory : MonoBehaviour
 
     void InitInventoryUI()
     {
-        for (int i=0;i < 12;i++)
+        int maxItmeCnt = Mathf.Max(12, player.Inventory.Count);
+        for (int i = 0; i < maxItmeCnt; i++)
         {
             uiSlots.Add(Instantiate(uiSlot, slotParant));
+            if (i < player.Inventory.Count)
+                uiSlots[i].SetItem(player.Inventory[i]);
+            uiSlots[i].RefreshUI();
         }
+
+        maxItemCntTxt.text = $"/{maxItmeCnt}";
+    }
+
+    public void AddItem(Item item)
+    {
+        UISlot newSlot;
+        if (uiSlots.Count < player.Inventory.Count)
+        {
+            newSlot = Instantiate(uiSlot, slotParant).GetComponent<UISlot>();
+            uiSlots.Add(newSlot);
+        }
+        else
+            newSlot = uiSlots[player.Inventory.Count - 1];
+
+        newSlot.SetItem(item);
+        newSlot.RefreshUI();
+    }
+
+    public void EquipUnEquip(Item item)
+    {
+        if (item.isEquip)
+            player.UnEquip(item);
+        else
+            player.Equip(item);
     }
 }
