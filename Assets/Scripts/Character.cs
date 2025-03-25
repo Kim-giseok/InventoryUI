@@ -13,7 +13,9 @@ public class Character
     public int Hp { get; private set; }
     public int Cri { get; private set; }
 
-    public Character(string id, int level, int exp, int maxExp, int atk, int def, int hp, int cri)
+    public int Gold { get; private set; }
+
+    public Character(string id, int level, int exp, int maxExp, int atk, int def, int hp, int cri, int gold)
     {
         Id = id;
         Level = level;
@@ -23,5 +25,6 @@ public class Character
         Def = def;
         Hp = hp;
         Cri = cri;
+        Gold = gold;
     }
 }

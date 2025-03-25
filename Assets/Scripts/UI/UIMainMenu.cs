@@ -49,4 +49,13 @@ public class UIMainMenu : MonoBehaviour
 
         UIManager.Instance.Inventory.gameObject.SetActive(true);
     }
+
+    public void SetInfo (Character player)
+    {
+        idTxt.text = player.Id;
+        levelTxt.text = player.Level.ToString();
+        expTxt.text = $"{player.Exp}/{player.MaxExp}";
+
+        goldTxt.text = player.Gold.ToString();
+    }
 }

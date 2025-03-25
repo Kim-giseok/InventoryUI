@@ -32,4 +32,13 @@ public class UIStatus : MonoBehaviour
     {
         backBtn.onClick.AddListener(UIManager.Instance.MainMenu.OpenMainMenu);
     }
+
+    public void SetInfo(Character player)
+    {
+        atkTxt.text = player.Atk.ToString();
+        defTxt.text = player.Def.ToString();
+        hpTxt.text = player.Hp.ToString();
+        criTxt.text = player.Cri.ToString();
+    }
+
 }
