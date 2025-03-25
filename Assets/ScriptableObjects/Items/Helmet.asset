@@ -16,4 +16,4 @@ MonoBehaviour:
   <Stats>k__BackingField:
   - type: 1
     value: 5
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: a3e2880b286c5c444a42a3ecac0b1e5e, type: 3}
