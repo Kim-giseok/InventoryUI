@@ -13,7 +13,9 @@ public class Character
 
     public int Gold { get; private set; }
 
-    public Character(string id, int level, int exp, int maxExp, Stat[] stats, int gold)
+    public List<Item> Inventory { get; private set; }
+
+    public Character(string id, int level, int exp, int maxExp, Stat[] stats, int gold, List<Item> inventory)
     {
         Id = id;
         Level = level;
@@ -24,5 +26,26 @@ public class Character
             Stats[stat.type] = stat.value;
 
         Gold = gold;
+
+        Inventory = inventory;
+    }
+
+    public void AddItem(Item item)
+    {
+        Inventory.Add(item);
+    }
+
+    public void Equip(Item item)
+    {
+        item.isEquip = true;
+        foreach (var stat in item.data.Stats)
+            Stats[stat.type] += stat.value;
+    }
+
+    public void UnEquip(Item item)
+    {
+        foreach (var stat in item.data.Stats)
+            Stats[stat.type] -= stat.value;
+        item.isEquip = false;
     }
 }
